@@ -98,48 +98,6 @@ pointer-events:none;
 z-index:1;
 }
 
-.letterWrap{
-max-width:720px;
-margin:18px auto 0;
-text-align:left;
-background:rgba(255,255,255,0.65);
-padding:18px 16px 18px 18px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,0.12);
-position:relative;
-max-height:60vh;
-overflow-y:auto;
--webkit-overflow-scrolling:touch;
-}
-
-.letterWrap::before{
-content:"";
-position:absolute;
-left:10px;
-top:14px;
-bottom:14px;
-width:3px;
-background:rgba(60,60,60,0.35);
-border-radius:5px;
-}
-
-#letterBox{
-margin-left:14px;
-line-height:1.8;
-font-size:16px;
-color:#444;
-}
-
-.highlight{
-background-image:linear-gradient(#ff6bb5,#ff6bb5);
-background-repeat:no-repeat;
-background-size:100% 4px;
-background-position:0 1.1em;
-padding:0 2px;
-box-decoration-break:clone;
--webkit-box-decoration-break:clone;
-}
-
 .smallHint{
 font-size:14px;
 opacity:0.85;
@@ -214,6 +172,7 @@ bacanyh pelan pelan!!
 <p>
 hari ini dan seterusnya harus menjadi hari yang bahagia buat kamuu. <br>you deserve all the love in the world, sayangku.<br>new age, new year, new dreams!!<br>
 terima kasih sudah lahir ke dunia ini <3
+</p>
 
 <button onclick="nextPage()">open this</button>
 
@@ -248,22 +207,7 @@ i'm still here for you and will never go anywhere.<br>
 
 it's your day cintakuu. aku bikin ini buat kamu!!</p>
 
-<button onclick="nextPage()">pincittt</button>
-
-</div>
-
-<div class="page">
-
-<h1>
-HBD<br>
-MY BBG
-</h1>
-
-<div class="letterWrap">
-<div id="letterBox"></div>
-</div>
-
-<p class="smallHint">— from pacar xiao 🧸</p>
+<button onclick="window.location.href='https://francescassi.github.io/Alexandra/'">pincittt</button>
 
 </div>
 
@@ -303,10 +247,6 @@ pages[current].classList.add("active")
 music.play().catch(err=>{
 console.log(err)
 })
-
-if(current===7){
-restartLetterTyping()
-}
 
 }
 
@@ -351,48 +291,6 @@ setTimeout(()=>{c.remove()},6000)
 }
 
 setInterval(createConfetti,200)
-
-const letterHTML = `
-Gw sih cuma mau ngingetin, sekarang lu udah 'resmi' jadi orang dewasa di mata hukum. Happy 17th, use your freedom wisely. Jangan aneh aneh ya lu, gw gebuk nih. <br><br>
-
-May God watch over you at all times, even on the days when the world feels too heavy. Terima kasih udah jadi bagian dari perjalanan hidup gw sampe sejauh ini. <br><br>
-
-Padahal kita awalnya kenal gara gara mutasi, gak nyangka sekarang gw udah 18 tahun dan lu 17 tahun. Semoga di umur baru ini, semua pintu kesempatan kebuka lebar buat lu. Apapun yang lagi lu kejar sekarang, semoga jalannya dimudahin. Pokoknya gw bakal jadi orang pertama yang bangga pas lu berhasil nanti. <br><br>
-
-So, keep chasing your dreams, qis. Tell me kalau ada masalah, kalau butuh bantuan. Inget ya, walaupun lu udah makin 'dewasa', lu gak harus nanggung semuanya sendirian. Kalau lu lagi capek atau lu lagi bingung, gw masih di sini. <br><br>
-
-<span class="highlight">Same place, same person.</span> Jangan sungkan buat cari gw kalo lu butuh apa-apa. Lu bisa dateng ke gw, nanti gw coba baca energi lu dh awkawkawkawkawkawk. <br><br>
-
-Dah ah, Happy Sweet Seventeen! Nikmatin hari ini, lu pantes dapetin semua kebahagiaan yang ada. <br><br>
-
-Love you, always.
-`
-
-let typingTimer=null
-
-function restartLetterTyping(){
-
-const box=document.getElementById("letterBox")
-
-box.innerHTML=""
-
-let i=0
-
-function step(){
-
-box.innerHTML=letterHTML.slice(0,i)
-
-i++
-
-if(i<letterHTML.length){
-typingTimer=setTimeout(step,20)
-}
-
-}
-
-step()
-
-}
 
 </script>
 
